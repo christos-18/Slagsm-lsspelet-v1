@@ -48,14 +48,23 @@ namespace slagskeppet
 
             Console.WriteLine("\n");
 
+            Console.Clear();
+
             while (hp > 0 && enemyHp > 0)
             {
                 slag = generator.Next(10,21);
                 enemyHp -= slag;
                 Console.WriteLine("" + name + " slår ett slag på The Daedra så just nu har The Daedra " + enemyHp + " hp");
+                Console.WriteLine("" + name + " skadade " + slag + " hp");
 
+                Console.WriteLine("\n");
+
+                slag = generator.Next(10,21);
                 hp -= slag;
-                Console.WriteLine("The Daedra slår ett slag på " + name + " så just nu har " + name + "" + hp + " hp ");
+                Console.WriteLine("The Daedra slår ett slag på " + name + " så just nu har " + name + " "  + hp + " hp ");
+                Console.WriteLine("The Daedra skadade " + slag + " hp");
+
+                Console.WriteLine("\n");
 
 
                 Console.ReadLine();
