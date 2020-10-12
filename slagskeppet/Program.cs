@@ -16,7 +16,7 @@ namespace slagskeppet
             string name = Console.ReadLine();
 
             int hp = 100;
-            int enemyHp = 50;
+            int enemyHp = 100;
 
 
             Console.WriteLine("Välj ett namn: \n \n  Mystic \n  Alpha \n  Ghost ");
@@ -50,10 +50,15 @@ namespace slagskeppet
 
             while (hp > 0 && enemyHp > 0)
             {
-                slag = generator.Next(10, 21);
+                slag = generator.Next(10,21);
                 enemyHp -= slag;
-                Console.WriteLine("" + name + "slår ett slag på The Daedra och har" + enemyHp + "");
+                Console.WriteLine("" + name + " slår ett slag på The Daedra så just nu har The Daedra " + enemyHp + " hp");
 
+                hp -= slag;
+                Console.WriteLine("The Daedra slår ett slag på " + name + " så just nu har " + name + "" + hp + " hp ");
+
+
+                Console.ReadLine();
 
             }
             
