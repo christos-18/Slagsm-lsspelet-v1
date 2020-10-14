@@ -51,44 +51,87 @@ namespace Frågesport
 
 
                
-             Console.WriteLine("Tryck Enter för att starta spelet");
+             Console.WriteLine("Tryck Enter 2 gånger för att starta spelet");
 
 
              Random generator = new Random();
 
              int slag = generator.Next(10, 21);
 
-             string name = Console.ReadLine();
+            string name = Console.ReadLine();
 
-             int hp = 100;
+            string boss = Console.ReadLine();
+
+            
+
+
+
+
+
+
+            int hp = 100;
              int enemyHp = 100;
+             // int boss1hp = 90;
+             // int boss2hp = 100;
+             // int boss3hp = 120;
 
 
-             Console.WriteLine("Välj ett namn: \n \n  Mystic \n  Alpha \n  Ghost ");
 
-             while (name != "Mystic" && name != "Alpha" && name != "Ghost")
+                  Console.WriteLine("Välj vilken gubbe du vill spela: \n \n  barbar \n  wizz \n  ork ");
+
+                 while (name != "barbar" && name != "wizz" && name != "ork")
  
               {
 
                  Console.WriteLine("\n");
 
-                 Console.WriteLine("Svara bara (Mystic), (Alpha) eller (Ghost)");
+                 Console.WriteLine("Svara bara (barbar), (wizz) eller (ork)");
 
                  Console.WriteLine("\n");
 
                  name = Console.ReadLine();
               }
 
-             if (name == "Mystic" || name == "Alpha" || name == "Ghost")
+             if (name == "barbar" || name == "wizz" || name == "ork")
+             {
+                Console.WriteLine("Du kommer nu att spela som en " + name +"");
+            }
+            
+
+
+
+
+
+            Console.WriteLine("Välj vilken boss du vill möta: \n \n  Boss 1 \n  Boss 2 \n  Boss 3 ");
+
+             while (boss != "Boss 1" && boss != "Boss 2" && boss != "Boss 3")
+ 
+              {
+
+                 Console.WriteLine("\n");
+
+                 Console.WriteLine("Svara bara (Boss 1), (Boss 2) eller (Boss 3)");
+
+                 Console.WriteLine("\n");
+
+                 boss = Console.ReadLine();
+              }
+
+             if (boss == "Boss 1" || boss == "Boss 2" || boss == "Boss 3")
              {
 
-                 Console.WriteLine("Din karaktär kommer nu bli kallad för " + name + "");
+                 Console.WriteLine("Du kommer nu att möta " + boss +" ");
+
+                 
              }
+
+             
+
 
              Console.WriteLine("\n");
 
 
-             Console.WriteLine("Du är just nu på level 1 och kommer få möta level 1 bossen som kallas för The Daedra");
+             Console.WriteLine("Du kommer nu att möta " + boss +" ");
 
              Console.WriteLine("\n");
 
@@ -101,14 +144,14 @@ namespace Frågesport
 
                  slag = generator.Next(10,21);
                  enemyHp -= slag;
-                 Console.WriteLine("" + name + " slår ett slag på bossen the Daedra så just nu har Bossen " + enemyHp + " hp", Console.ForegroundColor = ConsoleColor.Green);
+                 Console.WriteLine("" + name + " slår ett slag på " + boss + " just nu har " + enemyHp + " hp", Console.ForegroundColor = ConsoleColor.Green);
                  Console.WriteLine("" + name + " skadade " + slag + " hp", Console.ForegroundColor = ConsoleColor.Red);
 
                  Console.WriteLine("\n");
 
                  slag = generator.Next(10,21);
                  hp -= slag;
-                 Console.WriteLine("Bossen the Daedra slår ett slag på " + name + " så just nu har " + name + " "  + hp + " hp ", Console.ForegroundColor = ConsoleColor.Blue);
+                 Console.WriteLine("" + boss + " slår ett slag på dig så just nu har " + name + "  "  + hp + " hp ", Console.ForegroundColor = ConsoleColor.Blue);
                  Console.WriteLine("Bossen skadade dig med " + slag + " hp \n", Console.ForegroundColor = ConsoleColor.Red);
 
                  Console.WriteLine("Tryck Enter för att slå ett slag \n", Console.ForegroundColor = ConsoleColor.White);
