@@ -1,0 +1,37 @@
+   while (hp > 0 && enemyHp > 0)
+             {
+
+                 Console.Clear();
+
+                 slag = generator.Next(10,21);
+                 enemyHp -= slag;
+                 Console.WriteLine("" + name + " slår ett slag på " + boss + " just nu har " + enemyHp + " hp", Console.ForegroundColor = ConsoleColor.Green);
+                 Console.WriteLine("" + name + " skadade " + slag + " hp", Console.ForegroundColor = ConsoleColor.Red);
+
+                 Console.WriteLine("\n");
+
+                 slag = generator.Next(10,21);
+                 hp -= slag;
+                 Console.WriteLine("" + boss + " slår ett slag på dig så just nu har " + name + "  "  + hp + " hp ", Console.ForegroundColor = ConsoleColor.Blue);
+                 Console.WriteLine("Bossen skadade dig med " + slag + " hp \n", Console.ForegroundColor = ConsoleColor.Red);
+
+                 Console.WriteLine("Tryck Enter för att slå ett slag \n", Console.ForegroundColor = ConsoleColor.White);
+
+
+                 Console.ReadLine();
+
+             }
+
+             if (enemyHp < 0)
+             {
+                Console.WriteLine("Grattis, du vann!");
+
+             }
+
+             else if (hp < 0)
+             {
+                 Console.WriteLine("Du förlorade!");
+             }
+
+             Console.WriteLine("\n");
+            
