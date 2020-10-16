@@ -64,13 +64,6 @@ namespace Frågesport
 
             Console.ReadLine();
 
-
-
-
-
-
-
-
             int hp = 100;
             int enemyHp = 100;
 
